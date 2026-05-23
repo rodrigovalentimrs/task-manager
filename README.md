@@ -1,4 +1,4 @@
-# 📝 Task Manager
+# Task Manager
 
 Um aplicativo de gerenciamento de tarefas desenvolvido com React.
 
@@ -6,7 +6,7 @@ O objetivo do projeto é praticar conceitos fundamentais do React como component
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Criar novas tarefas
 - Editar tarefas existentes
@@ -16,7 +16,7 @@ O objetivo do projeto é praticar conceitos fundamentais do React como component
 
 ---
 
-## 🛠 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - React
 - JavaScript (ES6+)
@@ -26,9 +26,9 @@ O objetivo do projeto é praticar conceitos fundamentais do React como component
 
 ---
 
-## ▶️ Como executar o projeto
+## Como executar o projeto
 
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/task-manager.git
+git clone https://github.com/rodrigovalentimrs/task-manager.git
