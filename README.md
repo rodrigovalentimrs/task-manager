@@ -11,6 +11,10 @@ O objetivo do projeto é praticar conceitos fundamentais do React como component
 - Criar novas tarefas
 - Editar tarefas existentes
 - Excluir tarefas
+- Filtrar tarefas por status:
+  - Todos
+  - Concluídos
+  - Pendentes
 - Persistência de dados com LocalStorage
 - Interface simples e responsiva
 
