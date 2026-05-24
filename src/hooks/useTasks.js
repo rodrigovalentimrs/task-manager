@@ -6,12 +6,66 @@ export function useTasks(){
     const [error, setError] = useState("");
     const [editId, setEditId] = useState(null);
 
-    function addTask(){}
+        function handleTitleChange(e){
+            setTitle(e.target.value);
+        }
 
-    function deleteTask(id){}
+        function handleSubmit(e){
+            e.preventDefault()
 
-    function editTask(id, newTitle){}
-    
+            const erroMessage = validateTask(title);
+
+            if (erroMessage) {
+                setError(erroMessage);
+                return;
+            }
+
+            if(editId !== null){
+                updateTask(editId, title);
+            }else{
+                addTask();
+            }
+
+        }
+
+        function validateTask(title){
+            if(!title.trim()){
+                    return "Digite uma tarefa";
+            }
+            return null
+        }
+
+        function addTask(){
+            const newTask = {
+                id: crypto.randomUUID(),
+                title,
+                done: false
+            }
+
+            setTasks((prev) => [...prev, newTask]);
+            setTitle("");
+        }
+
+        function removeTask(id){
+            setTasks((prev) => prev.filter((task) => task.id !== id));
+            editId(null);
+        }
+
+        function updateTask(id, newTitle){
+            setTasks((prev) =>
+                prev.map((task) =>
+                    task.id === editId
+                        ? {
+                            ...task,
+                            title: newTitle
+                        }
+                        : task
+                )
+            )
+            setTitle("");
+            setEditId(null);
+        }
+        
 
         useEffect(() => {
         saveTasks(tasks);
