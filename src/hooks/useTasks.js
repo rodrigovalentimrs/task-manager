@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { loadTasks, saveTasks } from "../utils/storage";
 
 export function useTasks() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => loadTasks());
   const [title, setTitle] = useState("");
   const [error, setError] = useState("");
   const [editId, setEditId] = useState(null);
@@ -35,7 +36,7 @@ export function useTasks() {
         done: false,
       };
 
-      setTasks((prev) => [...prev, newTask]);
+      setTasks((prev) => [newTask, ...prev]);
     }
 
     setTitle("");
@@ -67,6 +68,22 @@ export function useTasks() {
     return true;
   });
 
+  // ✔️ salva no storage
+  useEffect(() => {
+    saveTasks(tasks);
+  }, [tasks]);
+
+  // ✔️ limpa erro automaticamente (UX)
+  useEffect(() => {
+    if (!error) return;
+
+    const timer = setTimeout(() => {
+      setError("");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [error]);
+
   return {
     title,
     error,
@@ -75,7 +92,6 @@ export function useTasks() {
     filteredTasks,
     filter,
     setFilter,
-
     handleTitleChange,
     handleSubmit,
     removeTask,
