@@ -1,7 +1,3 @@
-Aqui está seu **README em inglês**, já formatado e pronto para copiar e colar no GitHub:
-
----
-
 # Task Manager — React
 
 A task management application built with React, focused on productivity and daily organization.
