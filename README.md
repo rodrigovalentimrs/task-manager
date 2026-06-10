@@ -2,7 +2,7 @@ Aqui está seu **README em inglês**, já formatado e pronto para copiar e colar
 
 ---
 
-# 📌 Task Manager — React
+# Task Manager — React
 
 A task management application built with React, focused on productivity and daily organization.
 
@@ -10,7 +10,7 @@ This project allows users to create, edit, delete, and manage tasks with data pe
 
 ---
 
-## 🚀 Features
+## Features
 
 * Create, edit, and delete tasks
 * Mark tasks as completed
@@ -21,7 +21,7 @@ This project allows users to create, edit, delete, and manage tasks with data pe
 
 ---
 
-## 🧠 Concepts applied
+## Concepts applied
 
 * React component-based architecture
 * Hooks (useState, useEffect)
@@ -32,7 +32,7 @@ This project allows users to create, edit, delete, and manage tasks with data pe
 
 ---
 
-## 🛠️ Technologies used
+## Technologies used
 
 * React
 * JavaScript (ES6+)
@@ -43,14 +43,14 @@ This project allows users to create, edit, delete, and manage tasks with data pe
 
 ---
 
-## 📸 Live Demo
+## Live Demo
 
 🔗 Access the project here:
 [https://task-manager-hhyxe77mc-rodrigovalentimrs-projects.vercel.app/](https://task-manager-hhyxe77mc-rodrigovalentimrs-projects.vercel.app/)
 
 ---
 
-## 💻 How to run locally
+## How to run locally
 
 ### 1. Clone the repository
 
@@ -78,7 +78,7 @@ npm run dev
 
 ---
 
-## 🎯 Project purpose
+## Project purpose
 
 This project was developed to practice and strengthen core React concepts, especially:
 
